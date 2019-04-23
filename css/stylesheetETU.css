@@ -1,1 +1,18 @@
-// stylesheet etu
+/* stylesheet etu*/
+
+a
+{
+	background-color: #757575;
+}
+
+
+#Header{
+    
+    background-color: #2fb0d4;
+    min-height: 100vh;
+}
+
+#Panel{
+    background-color: #eeeeee;
+    min-height: 100vh;
+}
