@@ -1,0 +1,11 @@
+
+#tiersGauche{
+    
+    background-color: #2fb0d4;
+    min-height: 100vh;
+}
+
+#droite{
+    background-color: lightgray;
+    min-height: 100vh;
+}
