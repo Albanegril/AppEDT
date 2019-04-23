@@ -1,0 +1,23 @@
+#gauche{
+	min-height: 100vh;
+	background-color: #2FB0D4;
+	display: flex;
+	align-items: center;
+	justify-content: center; 
+}
+
+
+#droite{
+	min-height: 100vh;
+	background-color: #EEEEEE;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#container{
+	height: 55vh;
+	width: 50vh;
+	background-color: white;
+	border: 1px solid;
+}
