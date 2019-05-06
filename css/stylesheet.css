@@ -1,5 +1,7 @@
 /* stylesheet commun*/
 
+/* pour page type cf etu_page.html*/
+
 .fill-heigth{
     display: flex;
     flex-wrap: wrap;
