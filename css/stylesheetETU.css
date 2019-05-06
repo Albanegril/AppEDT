@@ -2,10 +2,10 @@
 
 #BtnDeco
 {
-	background-color: #757575;
+	background-color: #757575 !important;
 }
 
-.btn-large
+.btn
 {
 	background-color: #2fb0d4;
 }
@@ -30,9 +30,23 @@
 	justify-content: space-around;
 }
 
-#Progression
+#Progression div
 {
 	flex-direction: row;
 	flex-wrap: nowrap;
-	justify-content: space-around;
+	justify-content: space-around !important;
 }
+
+.BtnChoix
+{
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around !important;
+}
+
+#Header h3
+{
+    color: #757575 !important;
+}
+
+
