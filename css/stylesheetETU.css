@@ -17,7 +17,9 @@
 }
 
 #Header{
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #2fb0d4;
     min-height: 100vh;
 }
