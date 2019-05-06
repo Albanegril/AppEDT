@@ -1,10 +1,20 @@
 /* stylesheet etu*/
 
-a
+#BtnDeco
 {
 	background-color: #757575;
 }
 
+.btn-large
+{
+	background-color: #2fb0d4;
+}
+
+.fill-heigth{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
 
 #Header{
     
@@ -15,4 +25,12 @@ a
 #Panel{
     background-color: #eeeeee;
     min-height: 100vh;
+	justify-content: space-around;
+}
+
+#Progression
+{
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
 }
