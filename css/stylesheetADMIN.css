@@ -1,15 +1,23 @@
-.fill-heigth{
-    display: flex;
-    flex-wrap: wrap;
-    min-height: 100vh;
-}
-#tiersGauche{
-    
-    background-color: #2fb0d4;
-    min-height: 100vh;
+#gauche{
+	min-height: 100vh;
+	background-color: #2FB0D4;
+	display: flex;
+	align-items: center;
+	justify-content: center; 
 }
 
+
 #droite{
-    background-color: lightgray;
-    min-height: 100vh;
+	min-height: 100vh;
+	background-color: #EEEEEE;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#container{
+	height: 55vh;
+	width: 50vh;
+	background-color: white;
+	border: 1px solid;
 }
