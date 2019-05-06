@@ -2,121 +2,138 @@
 <html lang="fr" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="main.css">
+    <meta charset="utf-8">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="../css/main.css">
 
-  <!--Import jQuery before materialize.js-->
-     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-  <style media="screen">
+    <script src="../js/sondage.js" charset="utf-8"></script>
 
-  </style>
+    <style media="screen">
+        body {
+            background-color: #eeeeee;
+        }
+    </style>
 
-  <title>Sondage</title>
+    <title>Sondage</title>
 </head>
 
 <body>
-  <div class="container-fluid">
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#" class="left"><img src="https://webensim.univ-lemans.fr/ressources/icones/interface/LOGO-ensim-polytech-2017.png" alt="" width="250px"></a>
-      <a href="#" class="brand-logo center">Scheduler3000 : Sondage</a>      </div>
-    </nav>
+    <div class="container-fluid">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="left"><img src="https://webensim.univ-lemans.fr/ressources/icones/interface/LOGO-ensim-polytech-2017.png" alt="" width="250px"></a>
+                <a href="#" class="brand-logo center">Scheduler3000 : Sondage</a> </div>
+        </nav>
 
-  </div>
-
-
-  <div class="container">
-    <div class="row">
-      <div class="col s10 offset-s1">
-        <div class="card">
-          <div class="card-content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget semper elit. Donec condimentum accumsan tortor, vitae aliquet tellus mattis ac. Nunc dapibus fermentum facilisis. Nulla ullamcorper fermentum metus pellentesque vehicula.
-            Morbi maximus maximus turpis, eu cursus metus ornare cursus. Ut facilisis facilisis dui, consectetur maximus diam varius vitae. Sed non mattis ipsum. Suspendisse facilisis a turpis porta rutrum. Nunc et laoreet purus. Etiam in risus
-            bibendum ipsum posuere tempus. Suspendisse aliquam nunc et mauris tincidunt, vel gravida felis varius. Nullam feugiat erat ligula, in elementum sapien laoreet vel.
-          </div>
-        </div>
-      </div>
     </div>
 
-    <div class="row">
-      <div class="col s8 offset-s2">
+
+    <div class="container">
         <div class="row">
-          <div class="col s4">
-            <div class="card">
-              <div class="card-image">
-                <img src="img/smiley.jpg" alt="">
-              </div>
+            <div class="col s10 offset-s1">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">Cours de physique</span>
+                        <ul class="collection">
+                            <li class="collection-item">Date : 01 avril 2019, 20h00 - 21h15</li>
+                            <li class="collection-item">Professeur : Mr XXX</li>
+                            <li class="collection-item">Raison : It's a trap !</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col s4">
-            <div class="card">
-              <div class="card-image">
-                <img src="img/smiley (copy).jpg" alt="">
-              </div>
-            </div>
-          </div>
-          <div class="col s4">
-            <div class="card">
-              <div class="card-image">
-                <img src="img/smiley (another copy).jpg" alt="">
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
 
-    <div class="row">
-      <div class="col s4 offset-s4">
-        <div class="card">
-          <div class="card-content">
-            <form class="" action="index.html" method="post">
-              <p>
-                <label for="">
-                  <input type="checkbox" name="" value="">
-                  <span>
-                    Lorem ipsum dolor sit amet.
-                  </span>
-                </label>
-              </p>
-              <p>
-                <label for="">
-                  <input type="checkbox" name="" value="" checked="checked">
-                  <span>
-                    Lorem ipsum dolor sit amet.
-                  </span>
-                </label>
-              </p>
-              <p>
-                <label for="">
-                  <input type="checkbox" name="" value="" checked="checked">
-                  <span>
-                    Lorem ipsum dolor sit amet.
-                  </span>
-                </label>
-              </p>
-              <div class="right-align">
-
-                <a class="waves-effect waves-light btn"><i class="material-icons left">send</i>button</a>
-              </div>
-            </form>
-          </div>
+        <div class="row">
+            <div class="col s8 offset-s2">
+                <div class="row">
+                    <div class="col s4" id="oui">
+                        <div class="card">
+                            <div class="card-image" onclick="avis('oui')">
+                                <img src="../imgs/smiley.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s4" id="sans">
+                        <div class="card">
+                            <div class="card-image" onclick="avis('sans')">
+                                <img src="../imgs/smiley (another copy).jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s4" id="non">
+                        <div class="card">
+                            <div class="card-image" onclick="avis('non')">
+                                <img src="../imgs/smiley (copy).jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <div class="row">
+            <div class="col s4 offset-s4">
+                <div class="card" id="choixChangement">
+                    <div class="card-content">
+                        <form class="" action="index.html" method="post">
+                            <p>
+                                <label>
+                                    <input type="checkbox">
+                                    <span>
+                                        29 décembre, 8h00 - 9h15
+                                    </span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="checkbox" name="" value="" >
+                                    <span>
+                                        14 juillet, 21h00 - 22h15
+                                    </span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="checkbox" name="" value="">
+                                    <span>
+                                        1 avril, 10h00 - 11h15
+                                    </span>
+                                </label>
+                            </p>
+                            <div class="card-content right-align" onclick="validerChoix()">
+                                <a class="waves-effect waves-light btn"><i class="material-icons left">send</i>Valider mes choix</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s4 offset-s4" id="validation">
+                <div class="card" id="choixChangement">
+                    <div class="card-content center-align">
+                        <span class="card-title">Validation</span>
+                        <p>"J'ai choisi en mon âme et conscience."</p>
+                        <a href="sondage.html" class="waves-effect waves-light btn"><i class="material-icons left">block</i>Recommencer</a>
+                        <a class="waves-effect waves-light btn"><i class="material-icons left">send</i>Valider</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 
     <script>
-
-      M.AutoInit();
-
+        M.AutoInit();
+        customInit();
     </script>
 </body>
 
