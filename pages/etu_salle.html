@@ -32,7 +32,7 @@
             <div id="Progression">
               <div class="z-depth-2">
                 <p class="waves-effect waves-light btn custom.cprimary">Selection</p>
-                <p class="waves-effect waves-light btn custom.cprimary custom-text.text-cprimary disabled">Suggestion</p>
+                <p class="waves-effect waves-light btn custom.cprimary">Suggestion</p>
                 <p class="waves-effect waves-light btn custom.cprimary custom-text.text-cprimary disabled">Salle</p>
                 <p class="waves-effect waves-light btn custom.cprimary custom-text.text-cprimary disabled">Commentaire</p>
                 <p class="waves-effect waves-light btn custom.cprimary custom-text.text-cprimary disabled">Sondage</p>
@@ -42,12 +42,48 @@
 
             <div id="Formulaire">
               <div class="z-depth-2">
-                <p>Sélectionner le cours sur lequel vous voulez agir</p>
-                <div class="row BtnChoix">
-                  <a href="etu_suggestion.html" class="waves-effect waves-light btn-large">Deplacement</a>
-                  <a href="#" class="waves-effect waves-light btn-large">Echange</a>
-                  <a href="#" class="waves-effect waves-light btn-large">Modification</a>
-                </div>
+                <h6>Sélectionner les emplacements où ce cours pourrait être déplacé : #cours sélectionné</h6>
+
+                  <form action="#">
+                  
+                      <div class="col s4 offset-s2">
+                        <p>
+                          <label>
+                            <input type="checkbox" />
+                            <span>Suggestion 1</span>
+                          </label>
+                        </p>
+                        <p>
+                          <label>
+                            <input type="checkbox" />
+                            <span>Suggestion 2</span>
+                          </label>
+                        </p>
+                        <p>
+                          <label>
+                            <input type="checkbox"  />
+                            <span>Suggestion 3</span>
+                          </label>
+                        </p>
+                        <p>
+                          <label>
+                            <input type="checkbox" disabled="disabled" />
+                            <span><i class="material-icons">add</i></span>
+                          </label>
+                        </p>
+                      </div>
+
+                      <p class="col s2 offset-s1">
+                        <label>
+                          <input class="with-gap" name="group1" type="radio"  />
+                          <span>Libre</span>
+                        </label>
+                      </p>
+                      <p>
+                        <a href="etu_salle.html" class="waves-effect waves-light btn-large">Valider</a> 
+                      </p>
+                    
+                  </form>
                </div>
             </div>
           </div>
