@@ -23,12 +23,12 @@
             <div id="formulaire">
               <form>
               <label for="uname"></label>
-              <input type="text" placeholder="Identifiant" name="uname" required>
+              <input type="text" placeholder="Identifiant" id="uname" name="uname" required>
 
               <label for="psw"></label>
-              <input type="password" placeholder="Mot de passe" name="psw" required>
+              <input type="password" placeholder="Mot de passe" id="psw" name="psw" required>
             </div>
-            <button id="bouton_connect" type=submit name="submit">Se connecter</button>
+            <button type="submit" id="bouton_connect" onclick="return verifLogin(this.form.uname.value,this.form.psw.value)">Se connecter</button>
             </form>
           </div>
         </div> 
@@ -36,6 +36,7 @@
       </div> 
  
       <!--JavaScript at end of body for optimized loading--> 
-      <script type="text/javascript" src="js/materialize.min.js"></script> 
+      <script type="text/javascript" src="../js/materialize.min.js"></script>
+      <script src="../js/connexion.js"></script>
     </body> 
   </html>

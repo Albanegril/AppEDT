@@ -8,28 +8,29 @@
     min-height: 100vh;
 }
 
-#Panel{
-    background-color: #eeeeee;
-    min-height: 100vh;
-	justify-content: space-around;
-}
-
-#Panel div
-{
-    background-color: white;
-}
-
 #Header{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: #2fb0d4;
     min-height: 100vh;
+    position: fixed;
 }
 
 #Header h3
 {
     color: #757575 !important;
+}
+
+#Panel{
+    background-color: #eeeeee;
+    min-height: 100vh;
+	justify-content: space-around;
+}
+
+#Progression, #EDT, #Formulaire
+{
+    background-color: white !important;
 }
 
 #BtnDeco
