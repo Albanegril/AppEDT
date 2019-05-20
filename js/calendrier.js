@@ -43,7 +43,7 @@
           console.log(events[0]);
 
           var calendarEl = document.getElementById('calendar');
-          // $('#calendar').fullCalendar('destroy');
+          $('#calendar').fullCalendar('destroy');
           $('#calendar').fullCalendar({
 
             minTime: "08:00:00",
