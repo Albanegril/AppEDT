@@ -8,14 +8,14 @@ function verifLogin(name, pwd) {
     } 
     else if (name == "prof") {
     	if (pwd == "prof") {
-    		window.location.href = "../pages/prof.html"
+    		window.location.href = "../pages/prof_notifications.html"
     	} else {
     		document.write("Wrong Password!")
     	}
     }
     else if (name == "admin") {
     	if (pwd == "admin") {
-    		window.location.href = "../pages/admin.html"
+    		window.location.href = "../pages/admin_page.html"
     	} else {
     		document.write("Wrong Password!")
     	}

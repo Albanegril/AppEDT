@@ -40,11 +40,20 @@
 
 #Progression div
 {
+    text-align: center;
+    /*
     display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	justify-content: space-around !important;
+	justify-content: space-around !important;*/
 }
+.ligne {
+    display: inline-block;
+    width: 8%;
+    height: 3px;
+    border-top: 3px solid #757575;
+}
+
 
 .btn
 {
