@@ -50,36 +50,48 @@
                         <p>
                           <label>
                             <input type="checkbox" />
-                            <span>Suggestion 1</span>
+                            <span>Libre</span>
                           </label>
                         </p>
                         <p>
                           <label>
                             <input type="checkbox" />
-                            <span>Suggestion 2</span>
+                            <span>Informatique</span>
                           </label>
                         </p>
                         <p>
                           <label>
                             <input type="checkbox"  />
-                            <span>Suggestion 3</span>
+                            <span>Tables amovibles</span>
                           </label>
                         </p>
                         <p>
                           <label>
-                            <input type="checkbox" disabled="disabled" />
-                            <span><i class="material-icons">add</i></span>
+                            <input type="checkbox"  />
+                            <span> > 20 places</span>
+                          </label>
+                        </p>
+                        <p>
+                          <label>
+                            <input type="checkbox"  />
+                            <span>Projecteur</span>
                           </label>
                         </p>
                       </div>
 
-                      <p class="col s2 offset-s1">
-                        <label>
-                          <input class="with-gap" name="group1" type="radio"  />
-                          <span>Libre</span>
-                        </label>
+                      <p class="col s2 ">
+                          <!-- Dropdown Trigger -->
+                            <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Nom Salle</a>
+
+                            <!-- Dropdown Structure -->
+                            <ul id='dropdown1' class='dropdown-content'>
+                              <li><a href="#!">C03</a></li>
+                              <li><a href="#!">C05</a></li>
+                              <li><a href="#!">P22</a></li>
+                              <li><a href="#!">TD2</a></li>
+                            </ul>
                       </p>
-                      <p>
+                      <p class="col s2 offset-s1">
                         <a href="etu_salle.html" class="waves-effect waves-light btn-large">Valider</a> 
                       </p>
                     
@@ -94,4 +106,15 @@
 
       <!--JavaScript at end of body for optimized loading-->
       <script type="text/javascript" src="./js/materialize.min.js"></script>
+      <script type="text/javascript">
+         M.AutoInit();
+
+        document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('.dropdown-trigger');
+          var instances = M.Dropdown.init(elems, options);
+        });
+
+        // Or with jQuery
+        //$('.dropdown-trigger').dropdown();
+      </script>
     </body>
