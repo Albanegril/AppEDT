@@ -60,3 +60,16 @@
 	background-color: #2fb0d4;
     display: block;
 }
+
+#Formulaire
+{
+    display: flex;
+    margin-top: 10px !important;
+}
+
+#Formulaire .z-depth-2 {
+  flex-grow: 2; /* default 0 */
+  max-width: 100%;
+  padding-left: 10px;
+}
+
