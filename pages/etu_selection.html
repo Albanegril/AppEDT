@@ -37,7 +37,7 @@
       <img src="../imgs/logo_ensim_white.png" class="responsive-img" alt="Logo ENSIM">
     </div>
 
-    <div class="col s10" id="Panel">
+    <div class="col s10 offset-s2" id="Panel">
       <div id="calendar"></div>
 
 
@@ -103,16 +103,17 @@
           // $('#calendar').fullCalendar('destroy');
           $('#calendar').fullCalendar({
 
-            minTime: "06:00:00",
+            minTime: "08:00:00",
             maxTime: "20:00:00",
-            timezone: 'America/New_York',
+            timezone: 'local',
+            firstDay:1,
 
             header: {
               left: 'prev,next today',
               center: 'title',
               right: 'month,agendaWeek,agendaDay,listWeek'
             },
-            defaultDate: '2019-05-01',
+            defaultDate: '2019-05-20',
             navLinks: true,
             eventLimit: true,
             events: events,
@@ -124,6 +125,7 @@
                 element.append("<span>" + event.location + "</span>");
               }
             },
+            defaultView: 'agendaWeek',
           });
         });
 
