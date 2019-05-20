@@ -46,6 +46,8 @@
           $('#calendar').fullCalendar('destroy');
           $('#calendar').fullCalendar({
 
+
+
             minTime: "08:00:00",
             maxTime: "20:00:00",
             timezone: 'local',
