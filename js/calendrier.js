@@ -50,6 +50,8 @@
             maxTime: "20:00:00",
             timezone: 'local',
             firstDay:1,
+              weekends :false,
+              height: 750,
 
             header: {
               left: 'prev,next today',
