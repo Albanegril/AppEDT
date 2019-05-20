@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Pour Calendrier -->
+    <link rel='stylesheet' href='./calendrierTestc.css' />
+
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.0/fullcalendar.css' />
+
+    <script src='http://code.jquery.com/jquery-1.11.3.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.1/moment.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.0/fullcalendar.min.js'></script>
+
+    <!-- Pour ICAL -->
+    <script src="/home/leo/WebstormProjects/AppEDT/js/ical.js-master/build/ical.js"></script>
+    <script src="/home/leo/WebstormProjects/AppEDT/js/ical.js-master/build/ical.min.js"></script>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../css/stylesheet.css" />
+    <link type="text/css" rel="stylesheet" href="../css/stylesheetETU.css" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+
+<h2> Test Calendrier</h2>
+
+<div id='calendar'></div>
+
+
+
+
+
+<script type="text/javascript">
+    $.get("http://edt.univ-lemans.fr/jsp/custom/modules/plannings/anonymous_cal.jsp?resources=4782&projectId=1&calType=ical&nbWeeks=4").then(function (data) {
+// parse the ics data
+        var jcalData = ICAL.parse(data.trim());
+        var comp = new ICAL.Component(jcalData);
+        var eventComps = comp.getAllSubcomponents("vevent");
+// map them to FullCalendar events
+        var events = $.map(eventComps, function (item) {
+
+            if (item.getFirstPropertyValue("class") == "PRIVATE") {
+                return null;
+            }
+            else {
+                var toreturn = {
+                    "title": item.getFirstPropertyValue("summary"),
+                    "location": item.getFirstPropertyValue("location"),
+                };
+                var rrule=item.getFirstPropertyValue("rrule");
+                if(rrule!= null){ //event recurs
+                    toreturn.rrule={};
+                    if(rrule.freq) toreturn.rrule.freq=rrule.freq;
+                    if(rrule.parts.BYDAY) toreturn.rrule.byweekday=rrule.parts.BYDAY;
+                    if(rrule.until) toreturn.rrule.until=rrule.until.toString();
+                    if(rrule.until) toreturn.rrule.until=rrule.until.toString();
+                    if(rrule.interval) toreturn.rrule.interval=rrule.interval;
+                    var dtstart=item.getFirstPropertyValue("dtstart").toString();
+                    var dtend=item.getFirstPropertyValue("dtend").toString();
+                    toreturn.rrule.dtstart=dtstart;
+//count duration ms
+                    var startdate=new Date(dtstart);
+                    var enddate=new Date(dtend);
+                    toreturn.duration = enddate - startdate;
+                }else{
+                    toreturn.start=item.getFirstPropertyValue("dtstart").toString();
+                    toreturn.end=item.getFirstPropertyValue("dtend").toString();
+                }
+                return toreturn;
+            }
+        });
+        var calendarEl = document.getElementById('calendar');
+        var calendar =  $('#calendar').fullCalendar({
+
+            plugins: [ 'interaction','dayGrid','rrule' ],
+            defaultView: 'dayGridWeek',
+            displayEventEnd: true,
+            header: {
+                left: 'prev,next',
+                center: 'title',
+                right: 'dayGridDay,dayGridWeek,dayGridMonth'
+            },
+            events: events,
+            eventRender: function (info) {
+// console.log(info.event);
+// append location
+                if (info.event.extendedProps.location != null && info.event.extendedProps.location != "") {
+                    info.el.append(info.event.extendedProps.location );
+                }
+            }
+        });
+        calendar.render();
+    });
+</script>
+
+
+
+<!--JavaScript at end of body for optimized loading-->
+
+
+<script type="text/javascript" src="./js/materialize.min.js"></script>
+</body>
