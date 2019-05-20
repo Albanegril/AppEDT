@@ -1,0 +1,116 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="../css/stylesheet.css" />
+      <link type="text/css" rel="stylesheet" href="../css/stylesheetETU.css" />
+      <link type="text/css" rel="stylesheet" href="../css/main.css" />
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+      <div class="container-fluid fill-height">
+        <div class="row">
+          <div class="col s2 custom.cprimary" id="Header">
+            <h3>AppEDT</h3>
+            <a class="waves-effect waves-light btn" id="BtnDeco">Deconnexion</a>
+            <img src="../imgs/logo_ensim_white.png" class="responsive-img" alt="Logo ENSIM">
+          </div>
+          
+          <div class="col s10 offset-s2" id="Panel">
+            <div id="EDT">
+             <img src="../imgs/ent.png" class="responsive-img" alt="sreen edt">
+            </div>
+
+            <br>
+
+            <div id="Progression">
+              <div class="z-depth-2">
+                <p class="waves-effect waves-light btn custom.cprimary">Selection</p>
+                <p class="waves-effect waves-light btn custom.cprimary">Suggestion</p>
+                <p class="waves-effect waves-light btn custom.cprimary custom-text.text-cprimary disabled">Salle</p>
+                <p class="waves-effect waves-light btn custom.cprimary custom-text.text-cprimary disabled">Commentaire</p>
+                <p class="waves-effect waves-light btn custom.cprimary custom-text.text-cprimary disabled">Sondage</p>
+                <p class="waves-effect waves-light btn custom.cprimary custom-text.text-cprimary disabled">Récapitulatif</p>
+               </div>
+            </div>
+
+            <div id="Formulaire">
+              <div class="z-depth-2">
+                <h6>Sélectionner la salle que ou souhaité ou ses caractéristiques : #cours sélectionné</h6>
+
+                  <form action="#">
+                  
+                      <div class="col s4 offset-s2">
+                        <p>
+                          <label>
+                            <input type="checkbox" />
+                            <span>Libre</span>
+                          </label>
+                        </p>
+                        <p>
+                          <label>
+                            <input type="checkbox" />
+                            <span>Informatique</span>
+                          </label>
+                        </p>
+                        <p>
+                          <label>
+                            <input type="checkbox"  />
+                            <span>Tables amovibles</span>
+                          </label>
+                        </p>
+                        <p>
+                          <label>
+                            <input type="checkbox"  />
+                            <span> > 20 places</span>
+                          </label>
+                        </p>
+                        <p>
+                          <label>
+                            <input type="checkbox"  />
+                            <span>Projecteur</span>
+                          </label>
+                        </p>
+                      </div>
+
+                      <p class="col s2 ">
+                         
+                            <select multiple>
+                              <option value="" disabled selected>Nom Salle</option>
+                              <option value="1">Option 1</option>
+                              <option value="2">Option 2</option>
+                              <option value="3">Option 3</option>
+                            </select>
+                       
+                      </p>
+                      <p class="col s2 offset-s1">
+                        <a href="etu_salle.html" class="waves-effect waves-light btn-large">Valider</a> 
+                      </p>                
+                    
+                  </form>
+               </div>
+            </div>
+          </div>
+          
+        </div>
+      </div> 
+      
+
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="../js/materialize.min.js"></script>
+      <script type="text/javascript">
+        M.AutoInit();
+      </script>
+      <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('select');
+          var instances = M.FormSelect.init(elems, options);
+        });
+      </script>
+    </body>
