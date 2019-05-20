@@ -9,20 +9,20 @@
     <link type="text/css" rel="stylesheet" href="../css/stylesheetETU.css" />
     <link type="text/css" rel="stylesheet" href="../css/main.css" />
 
+    <!-- IMPORT CALENDAR -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.0/fullcalendar.css' />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.0/fullcalendar.css" />
-
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.1/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.0/fullcalendar.min.js"></script>
+    <script src='http://code.jquery.com/jquery-1.11.3.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.1/moment.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.0/fullcalendar.min.js'></script>
 
     <!-- Pour ICAL -->
     <script src="../js/ical.js-master/build/ical.js"></script>
     <script src="../js/ical.js-master/build/ical.min.js"></script>
 
+
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
 </head>
 
 <body>
@@ -33,95 +33,18 @@
             <a class="waves-effect waves-light btn" id="BtnDeco">Deconnexion</a>
             <img src="../imgs/logo_ensim_white.png" class="responsive-img" alt="Logo ENSIM">
         </div>
+
         <div class="col s10 offset-s2" id="Panel">
-            <div id="calendar"></div>
+            <div id="EDT">
+                <img src="../imgs/emploivert.jpg" class="responsive-img" alt="sreen edt">
+            </div>
 
-            <script type="text/javascript">
-
-
-
-
-                $.get("http://edt.univ-lemans.fr/jsp/custom/modules/plannings/anonymous_cal.jsp?resources=4782&projectId=1&calType=ical&nbWeeks=4").then(function (data) {
-// parse the ics data
-                    var jcalData = ICAL.parse(data.trim());
-                    var comp = new ICAL.Component(jcalData);
-                    var eventComps = comp.getAllSubcomponents("vevent");
-// map them to FullCalendar events
-                    var events = $.map(eventComps, function (item) {
-
-                        if (item.getFirstPropertyValue("class") == "PRIVATE") {
-                            return null;
-                        }
-                        else {
-                            var toreturn = {
-                                "title": item.getFirstPropertyValue("summary"),
-                                "location": item.getFirstPropertyValue("location"),
-                            };
-                            var rrule=item.getFirstPropertyValue("rrule");
-                            if(rrule!= null){ //event recurs
-                                toreturn.rrule={};
-                                if(rrule.freq) toreturn.rrule.freq=rrule.freq;
-                                if(rrule.parts.BYDAY) toreturn.rrule.byweekday=rrule.parts.BYDAY;
-                                if(rrule.until) toreturn.rrule.until=rrule.until.toString();
-                                if(rrule.until) toreturn.rrule.until=rrule.until.toString();
-                                if(rrule.interval) toreturn.rrule.interval=rrule.interval;
-                                var dtstart=item.getFirstPropertyValue("dtstart").toString();
-                                var dtend=item.getFirstPropertyValue("dtend").toString();
-                                toreturn.rrule.dtstart=dtstart;
-//count duration ms
-                                var startdate=new Date(dtstart);
-                                var enddate=new Date(dtend);
-                                toreturn.duration = enddate - startdate;
-                            }else{
-                                toreturn.start=item.getFirstPropertyValue("dtstart").toString();
-                                toreturn.end=item.getFirstPropertyValue("dtend").toString();
-                            }
-                            return toreturn;
-                        }
-                    });
-
-                    console.log("Coucou");
-                    console.log(events[0]);
-
-                    var calendarEl = document.getElementById('calendar');
-                    // $('#calendar').fullCalendar('destroy');
-                    $('#calendar').fullCalendar({
-
-                        minTime: "08:00:00",
-                        maxTime: "20:00:00",
-                        timezone: 'local',
-                        firstDay:1,
-
-                        header: {
-                            left: 'prev,next today',
-                            center: 'title',
-                            right: 'month,agendaWeek,agendaDay,listWeek'
-                        },
-                        defaultDate: '2019-05-20',
-                        navLinks: true,
-                        eventLimit: true,
-                        events: events,
-                        eventRender: function (event, element) {
-                            console.log(event);
-                            console.log("Salut");
-                            // append location
-                            if (event.location != null && event.location != "") {
-                                element.append("<span>" + event.location + "</span>");
-                            }
-                        },
-                        defaultView: 'agendaWeek',
-                    });
-                });
-
-
-
-            </script>
 
             <br>
-
             <div id="Progression">
                 <div id="test">
-                    <span><p class="waves-effect waves-light btn custom.cprimary">Voir le créneau proposé</p></span>
+                    <a class="waves-effect waves-light btn custom.cprimary" href="voirdemande2.html">Voir le créneau proposé</a>
+
                 </div>
             </div>
 
@@ -132,8 +55,17 @@
 </div>
 
 
+<script type="text/javascript">
+    document.getElementById("choixBouton").style.display = "none";
+    var p = document.getElementById("calendar");
+    calendar.onclick = showChoixBouton;
+
+
+</script>
+
 <!--JavaScript at end of body for optimized loading-->
-<script type="text/javascript" src="../js/materialize.min.js"></script>
+<script type="text/javascript" src="./js/materialize.min.js">
 
 
+</script>
 </body>
