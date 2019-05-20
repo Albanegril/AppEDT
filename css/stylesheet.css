@@ -28,9 +28,9 @@
 	justify-content: space-around;
 }
 
-#Panel div
+#Progression, #EDT, #Formulaire
 {
-    background-color: white;
+    background-color: white !important;
 }
 
 #BtnDeco
