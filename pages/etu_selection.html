@@ -40,22 +40,7 @@
     <div class="col s10 offset-s2" id="Panel">
       <div id="calendar"></div>
 
-
-
-
-
-
-
-
-
-
-
-
-
       <script type="text/javascript">
-
-
-
 
         $.get("http://edt.univ-lemans.fr/jsp/custom/modules/plannings/anonymous_cal.jsp?resources=4782&projectId=1&calType=ical&nbWeeks=4").then(function (data) {
 // parse the ics data
@@ -134,20 +119,23 @@
           document.getElementById("choixBouton").style.display = "flex";
         }
 
-
       </script>
-
 
       <br>
 
       <div id="Progression">
         <div class="z-depth-2">
-          <p class="waves-effect waves-light btn custom.cprimary">Selection</p>
-          <p class="waves-effect waves-light btn custom.cprimary custom-text.text-cprimary disabled">Suggestion</p>
-          <p class="waves-effect waves-light btn custom.cprimary custom-text.text-cprimary disabled">Salle</p>
-          <p class="waves-effect waves-light btn custom.cprimary custom-text.text-cprimary disabled">Commentaire</p>
-          <p class="waves-effect waves-light btn custom.cprimary custom-text.text-cprimary disabled">Sondage</p>
-          <p class="waves-effect waves-light btn custom.cprimary custom-text.text-cprimary disabled">Récapitulatif</p>
+          <span><p class="waves-effect waves-light btn custom.cprimary">Selection</p></span>
+          <span class="ligne"></span>
+          <span><p class="waves-effect waves-light btn custom.cprimary custom-text.text-cprimary disabled">Suggestion</p></span>
+          <span class="ligne"></span>
+          <span><p class="waves-effect waves-light btn custom.cprimary custom-text.text-cprimary disabled">Salle</p></span>
+          <span class="ligne"></span>
+          <span><p class="waves-effect waves-light btn custom.cprimary custom-text.text-cprimary disabled">Commentaire</p></span>
+          <span class="ligne"></span>
+          <span><p class="waves-effect waves-light btn custom.cprimary custom-text.text-cprimary disabled">Sondage</p></span>
+          <span class="ligne"></span>
+          <span><p class="waves-effect waves-light btn custom.cprimary custom-text.text-cprimary disabled">Récapitulatif</p></span>
         </div>
       </div>
 
