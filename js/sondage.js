@@ -12,11 +12,7 @@ function avis(avis) {
     });
 
 
-    if (avis == 'oui') {
-        document.getElementById("choixChangement").style.display = 'block';
-    } else {
-        document.getElementById("validation").style.display = 'block';
-    }
+    document.getElementById("choixChangement").style.display = 'block';
 }
 
 function validerChoix() {

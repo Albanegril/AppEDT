@@ -68,6 +68,7 @@
               console.log(event);
               console.log("Salut");
               // append location
+                event.backgroundColor = undefined;
               if (event.location != null && event.location != "") {
                 element.append("<span>" + event.location + "</span>");
               }
