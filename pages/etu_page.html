@@ -9,10 +9,19 @@
       <link type="text/css" rel="stylesheet" href="../css/stylesheetETU.css" />
       <link type="text/css" rel="stylesheet" href="../css/main.css" />
 
+        <!-- IMPORT CALENDAR -->
+      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.0/fullcalendar.css' />
+
+      <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.1/moment.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.0/fullcalendar.min.js"></script>
+
+      <!-- Pour ICAL -->
+      <script src="../js/ical.js-master/build/ical.min.js"></script>
+
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <script type = "text/javascript"
-                src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
     </head>
 
     <body>
@@ -25,24 +34,27 @@
           </div>
           <div class="col s10 offset-s2" id="Panel">
             <div id="EDT" class="z-depth-2">
-             <img src="../imgs/ent.png" class="responsive-img" alt="sreen edt">
+             <!-- <img src="../imgs/ent.png" class="responsive-img" alt="sreen edt"> -->
+             <div id="calendar"></div>
+              <script src="../js/calendrier.js"></script>
+
             </div>
 
             <br>
 
             <div id="Progression">
-               <div id="test">
-                   <span><p class="waves-effect waves-light btn custom.cprimary">Selection</p></span>
+               <div class="z-depth-2">
+                   <p class="waves-effect waves-light btn custom.cprimary">Selection</p>
                    <span class="ligne"></span>
-                   <span><p class="waves-effect waves-light btn custom.cprimary custom-text.text-cprimary disabled">Suggestion</p></span>
+                   <p class="waves-effect waves-light btn custom.cprimary custom-text.text-cprimary disabled">Suggestion</p>
                    <span class="ligne"></span>
-                   <span><p class="waves-effect waves-light btn custom.cprimary custom-text.text-cprimary disabled">Salle</p></span>
+                   <p class="waves-effect waves-light btn custom.cprimary custom-text.text-cprimary disabled">Salle</p>
                    <span class="ligne"></span>
-                   <span><p class="waves-effect waves-light btn custom.cprimary custom-text.text-cprimary disabled">Sondage</p></span>
+                   <p class="waves-effect waves-light btn custom.cprimary custom-text.text-cprimary disabled">Sondage</p>
                    <span class="ligne"></span>
-                   <span><p class="waves-effect waves-light btn custom.cprimary custom-text.text-cprimary disabled">Commentaire</p></span>
+                   <p class="waves-effect waves-light btn custom.cprimary custom-text.text-cprimary disabled">Commentaire</p>
                    <span class="ligne"></span>
-                   <span><p class="waves-effect waves-light btn custom.cprimary custom-text.text-cprimary disabled">Récapitulatif</p></span>
+                   <p class="waves-effect waves-light btn custom.cprimary custom-text.text-cprimary disabled">Récapitulatif</p>
                </div>
             </div>
 

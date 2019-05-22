@@ -1,7 +1,7 @@
 function verifLogin(name, pwd) {
     if (name == "etudiant") {
         if (pwd == "etudiant") {
-            window.location.href = "../pages/etu_page.html"
+            window.location.href = "../pages/etu_selection.html"
         } else {
             document.write("Wrong Password!")
         }
