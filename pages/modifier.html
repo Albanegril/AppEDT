@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../css/stylesheet.css" />
+    <link type="text/css" rel="stylesheet" href="../css/stylesheetETU.css" />
+    <link type="text/css" rel="stylesheet" href="../css/main.css" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script type = "text/javascript"
+            src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+</head>
+
+<body>
+<div class="container-fluid fill-height">
+    <div class="row">
+        <div class="col s2 custom.cprimary" id="Header">
+            <h3>AppEDT</h3>
+            <a class="waves-effect waves-light btn" id="BtnDeco">Deconnexion</a>
+            <img src="../imgs/logo_ensim_white.png" class="responsive-img" alt="Logo ENSIM">
+        </div>
+        <div class="col s10 offset-s2" id="Panel">
+            <div id="EDT" class="z-depth-2">
+                <img src="../imgs/emploirouge.jpg" class="responsive-img" alt="sreen edt">
+            </div>
+
+            <br>
+
+            <div id="Progression">
+                <div id="test">
+                    <a href="accepter.html" class="waves-effect waves-light btn-large">Accepter</a>
+                    <a href="modifier.html" class="waves-effect waves-light btn-large">Modifier</a>
+                    <a href="refuser.html" class="waves-effect waves-light btn-large">Refuser</a>
+
+
+                </div>
+            </div>
+            <div id="Formulaire">
+                <div class="z-depth-2">
+
+
+                    <div class="col s6 offset-s1 card">
+                        <form class="col s8">
+                            <div class="row">
+
+
+                                <div class="input-field col s6">
+                                    <label> Classe concernée</label>
+                                </div></div>
+
+                            <div class="row">
+
+
+                                <div class="input-field col s6">
+                                    <label></label>
+                                    <input placeholder = "classe" value = "4ips" id = "name" type = "text" >
+                                </div></div>
+
+                            <div class="row">
+
+
+                                <div class="input-field col s6">
+                                    <label> choisir une date</label>
+                                </div></div>
+
+
+
+
+                            <div class="row">
+
+
+                                <div class="input-field col s6">
+                                    <label></label>
+                                    <input id="beginDate" type="date" class="datepicker">
+                                </div></div>
+
+
+                            <div class="row">
+
+
+                                <div class="input-field col s6">
+                                    <label> choisir un créneau</label>
+                                </div></div>
+                            <div class="container">
+
+                                <div class = "row">
+
+
+                                    <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Créneau</a>
+
+                                    <!-- Dropdown Structure -->
+                                    <ul id='dropdown1' class='dropdown-content'>
+                                        <li><a href="#!">08:00 - 09:15</a></li>
+                                        <li><a href="#!">09:30 - 10:45</a></li>
+                                        <li><a href="#!">11:00 - 12:15</a></li>
+                                        <li><a href="#!">13:45 - 15:00</a></li>
+                                        <li><a href="#!">15:15 - 16:30</a></li>
+                                        <li><a href="#!">16:45 - 18:00</a></li>
+
+                                    </ul>
+                                </div></div>
+                            <div class="row">
+
+
+                                <div class="input-field col s6">
+                                    <label> choisir une salle</label>
+                                </div></div>
+                            <div class="container">
+
+                                <div class = "row">
+
+
+                                    <a class='dropdown-trigger btn' href='#' data-target='dropdown2'>Salle</a>
+
+                                    <!-- Dropdown Structure -->
+                                    <ul id='dropdown2' class='dropdown-content'>
+                                        <li><a href="#!">TD1</a></li>
+                                        <li><a href="#!">TD2</a></li>
+                                        <li><a href="#!">TD3</a></li>
+                                        <li><a href="#!">TD4</a></li>
+                                        <li><a href="#!">I01</a></li>
+                                        <li><a href="#!">I02</a></li>
+
+                                    </ul>
+                                </div></div>
+
+
+
+
+                            <div class = "row">
+                                <div class = "input-field col s12">
+                                    <input placeholder = "Comments (Disabled)" id = "comments"
+                                           type = "text" disabled />
+                                    <label for = "comments">Comments</label>
+                                </div>
+                            </div>
+
+                            <div class = "card-panel">
+                                <button class = "btn waves-effect waves-teal">Add</button></td>      </div>
+
+
+                            <!--<div class="row">
+                                <form class="col s12">
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                            <label for="textarea1">Classe concernée</label>
+                                        </div>
+                                    </div>
+                                    <label>Salle libre</label>
+                                    <select disabled>
+                                        <option value="" disabled selected>Choisir la classe</option>
+                                        <option value="1">Option 1</option>
+                                        <option value="2">Option 2</option>
+                                        <option value="3">Option 3</option>
+                                    </select>
+
+                                    <input type="text" class="datepicker">
+
+                                </form>-->
+                        </form>
+                    </div>
+                    <!--  refaire la card avec une hiérarchie de couleur (foncé/clair) et non de taille -->
+
+                    <p class="col s2 offset-s1">
+                        <a href="#" class="waves-effect waves-light btn-large">Terminer </a>
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+<!--JavaScript at end of body for optimized loading-->
+<script type="text/javascript" src="../js/materialize.min.js"></script>
+</body>
