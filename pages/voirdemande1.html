@@ -90,7 +90,7 @@
                     $('#calendar').fullCalendar({
 
 
-                        dayRender: function (date, cell) {
+                      /*  dayRender: function (date, cell) {
                             var today = $.fullCalendar.moment();
                           //  m.time();
                             var end = $.fullCalendar.moment().add(1, 'days');
@@ -104,7 +104,7 @@
                                 cell.css("background-color", "yellow");
                             }
 
-                        },
+                        },*/
                         minTime: "08:00:00",
                         maxTime: "20:00:00",
                         timezone: 'local',
@@ -133,10 +133,21 @@
                             console.log(event);
                             console.log("Salut");
                             // append location
-                            if (event.className == 'booked') {
+                          //  if (event.className == 'booked') {
+                              //  element.css({
+                                 //   'background-color': '#333333',
+                                  //  'border-color': '#333333'
+                               // });
+                            if (event.start._i ==  "2019-05-23T06:00:00Z") {
                                 element.css({
-                                    'background-color': '#333333',
-                                    'border-color': '#333333'
+                                    'background-color': 'red',
+                                    'border-color': 'red'
+                                });
+                            }
+                            if (event.start._i ==  "2019-05-23T13:15:00Z") {
+                                element.css({
+                                    'background-color': 'green',
+                                    'border-color': 'green'
                                 });
                             }
 
