@@ -15,6 +15,7 @@
     background-color: #2fb0d4;
     min-height: 100vh;
     position: fixed;
+    padding-bottom: 15px;
 }
 
 #Header h3
