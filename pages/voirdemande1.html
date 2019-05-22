@@ -20,6 +20,22 @@
     <!-- Pour ICAL -->
     <script src="../js/ical.js-master/build/ical.js"></script>
     <script src="../js/ical.js-master/build/ical.min.js"></script>
+    <style>.input-color {
+        position: relative;
+    }
+    .input-color input {
+        padding-left: 20px;
+    }
+    .input-color .color-box {
+        width: 10px;
+        height: 10px;
+        display: inline-block;
+        background-color: #ccc;
+        position: absolute;
+        left: 5px;
+        top: 5px;
+    }
+    </style>
 
 
     <!--Let browser know website is optimized for mobile-->
@@ -167,9 +183,17 @@
             <br>
 
             <div id="Progression">
-                 <p style="color:red;">Créneau initial à déplacer</p><p style="color:green;">Créneau proposé</p>
+                <!-- <p style="color:red;">Créneau initial à déplacer</p><p style="color:green;">Créneau proposé</p>-->
 
+                <div class="input-color">
+                    <input type="text" value="Créneau initial à déplacer" />
+                    <div class="color-box" style="background-color: #008000;"></div>
 
+                </div>
+                <div class="input-color">
+
+                <input type="text" value="Créneau proposé" />
+                    <div class="color-box" style="background-color: #FF0000;"></div></div>
                 <div id="test">
                     <a href="prof_accepter.html" class="waves-effect waves-light btn-large">Accepter</a>
                     <a href="prof_modifier.html" class="waves-effect waves-light btn-large">Modifier</a>
