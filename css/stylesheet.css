@@ -15,11 +15,14 @@
     background-color: #2fb0d4;
     min-height: 100vh;
     position: fixed;
+    padding-bottom: 15px;
 }
 
 #Header h3
 {
     color: #757575 !important;
+    font-size:4vw;
+    text-align:center;
 }
 
 #Panel{
@@ -36,6 +39,8 @@
 #BtnDeco
 {
 	background-color: #757575 !important;
+    font-size:1vw;
+    text-align:center;
 }
 
 #Progression div
