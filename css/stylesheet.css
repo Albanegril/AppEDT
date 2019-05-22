@@ -16,6 +16,23 @@
     min-height: 100vh;
     position: fixed;
     padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+#Header div
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around !important;
+}
+
+
+#Header div h4
+{
+    color: #757575 !important;
+    font-size:2vw;
+    text-align:center;
 }
 
 #Header h3
