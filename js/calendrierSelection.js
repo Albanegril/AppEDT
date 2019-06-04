@@ -60,7 +60,7 @@
               center: 'title',
               right: 'month,agendaWeek,agendaDay,listWeek'
             },
-            defaultDate: '2019-05-20',
+            defaultDate: '2019-06-03',
             navLinks: true,
             eventLimit: true,
             events: events,
